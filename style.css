@@ -1,0 +1,111 @@
+header {
+    background-color: rgb(59, 59, 59);
+    margin: 0px;
+    padding: 1px;
+    color: white;
+    text-align: center;
+}
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin: 0px;
+    padding: 1px;  
+}
+#navigate {
+    position: sticky;
+    z-index: 1;
+    top: 0%;  
+}
+.menu {
+    margin: 0%;
+    background-color: rgb(0,0,0,0.5);
+}
+.menu li {
+    padding: 10px;
+    display: inline-block;
+}
+.menu li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.menu li:hover {
+    background-color: rgb(0,0,0,0.7);
+}
+.menu li:nth-child(2):hover #dropdown1, .menu li:nth-child(3):hover #dropdown2{
+    display: block;
+}
+#dropdown1, #dropdown2{
+position: absolute;
+width: auto;
+max-width: 150px;
+display: none;
+top:42.5px;
+background-color: whitesmoke;
+padding: 0%;
+}
+#dropdown1 li, #dropdown2 li{
+display: block;
+}
+#dropdown1 li a, #dropdown2 li a{
+    color: steelblue;
+    font: 15px;
+}
+#dropdown1 li a:hover , #dropdown2 li a:hover {
+   background-color: gainsboro;
+}
+.Care {
+    position: relative;
+    background-color: whitesmoke;
+    display: inline-block;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 8px;
+}
+.Care img {
+    width: 270px;
+    height: 170px;
+}
+.price {
+    color: blue;
+}
+.cart {
+    width: 250px;
+    height: 30px;
+    color: orange;
+    background-color: rgb(217, 239, 248);
+    border: 2px solid blue;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px;
+}
+.cart h4 {
+    text-align: center;
+    position: relative;
+    bottom: 15px;
+}
+
+.Slide_Animation {
+    width: 98.9%;
+    height: 400px;
+    position: relative;
+    left: 0%;
+    top: 38%;
+    background-image: url('Images/Animation/ani1.jpg');
+    background-size: 100% 100%;
+    border: 2px solid steelblue;
+    transform:translate( 6px, 0%);
+    animation-name: slider;
+    animation-duration: 11s;
+    animation-iteration-count:infinite;    
+    margin-top: 5px;
+}
+
+@keyframes slider {
+    0%{background-image: url('Images/Animation/ani1.jpg');}
+    20%{background-image: url('Images/Animation/ani2.png');}
+    40%{background-image: url('Images/Animation/ani3.jpg');}
+    60%{background-image: url('Images/Animation/ani4.jpg');}
+    80%{background-image: url('Images/Animation/ani5.jpg');}  
+}
