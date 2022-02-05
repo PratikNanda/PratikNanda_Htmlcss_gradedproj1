@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab Test</title>
+
+
+    <style>
+
+        article {
+            margin: 50px;
+        }
+        button {
+            display: block;
+            margin: 20px;
+            width: 80px;
+            border-radius: 4px;
+            height: 30px;
+            color: white;
+            font-size: 18px;
+            float: right;
+            border: none;
+            background-color: rgb(175, 102, 243);
+        }
+
+        .main {
+            width: 1000px;
+            height: 500px;
+            margin-left: 300px;
+            display: flex;
+            position: relative;
+            top: 50px;
+            overflow: hidden;
+            overflow-y: scroll;
+            border: 2px solid white;
+            box-shadow: 1px 2px 25px grey;
+        }
+
+        .image img {
+            width: 500px;
+            height: 500px;
+            position: fixed;
+            right: 245px;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            width: 500px;
+        }
+
+        #district {
+            height: 50px;
+        }
+
+        input {
+            margin: 5px;
+            border: none;
+            background-color: white;
+            border-bottom: 1px solid gray;
+        }
+
+        .button {
+            position: relative;
+            top: 70px;
+            right: 600px;
+        }
+
+        input,
+        label,
+        h3,
+        #district {
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
 </head>
+
 <body>
-    <h1></h1>
+    <div class="main">
+        <div class="forms">
+            <form action="">
+                <article>
+                    <h2>1.Your Contact Details</h2>
+                    <div class="flex">
+                        <input type=" text" placeholder="Full Name" title="name" required spellcheck="true">
+                        <input type=" text" placeholder="Patient Id (if exists)" title="name" required
+                            spellcheck="true">
+                        <input type=" text" placeholder="Contact Number" title="name" required spellcheck="true">
+                        <input type="email" placeholder="Email ID" title="name" required spellcheck="true">
+                    </div>
+                </article>
+                <article>
+                    <h2>2.Address</h2>
+                    <div class="flex">
+                        <input type="text" placeholder="H.No" required>
+                        <input type="text" placeholder="Street" required>
+                        <input type="text" placeholder="Area" required>
+                    </div>
+                    <h2>District</h2>
+                    <select name="District" id="district" required>
+                        <option value="">Choose</option>
+                        <option value="Bangalore Urban">Bangalore Urban</option>
+                        <option value="Bangalore Rural">Bangalore Rural</option>
+                        <option value="Ramnagar">Ramnagar</option>
+                    </select>
+                </article>
+
+                <article>
+                    <h2>3.Test Type</h2>
+                    <p>Check atleast one box without fail</p>
+                    <input type="checkbox" id="c1" name="option1" value="CBC">
+                    <label for="c1">CBC</label>
+                    <br>
+                    <input type="checkbox" id="c2" name="option2" value="Complete Urine">
+                    <label for="c2">Complete Urine</label>
+                    <br>
+                    <input type="checkbox" id="c3" name="option1" value="Lipid Profile">
+                    <label for="c1">Lipid Profile</label>
+                    <br>
+                    <input type="checkbox" id="c4" name="option1" value="Thyroid Stimulating Hormone(TSH)">
+                    <label for="c1">Thyroid Stimulating Hormone(TSH)</label>
+                    <br>
+                    <input type="checkbox" id="c5" name="option3" value="Glucose Test">
+                    <label for="c3">Glucose Test</label>
+                </article>
+                <article style="width: 400px;">
+                    <h2>4.Do you want a hard copy of the report also?
+                    </h2>
+                    <input type="radio" id="c6" name="option" value="Image" required>
+                    <label for="c6">Yes</label>
+                    <br>
+                    <input type="radio" id="c7" name="option" value="Video">
+                    <label for="c7">No</label>
+                </article>
+
+                <article style="width: 400px;">
+                    <h2>5.Select Your Comfortable Date and Time.</h2>
+                    <label for="c1">Date:</label>
+                    <input type="date" required>
+                    <br>
+                    <label for="c1">Time:<label>
+                            <input type="time" required>
+                </article>
+            </form>
+        </div>
+        <div class="image">
+            <img src="Images/Lab-Test/lab-test.jpg" alt="">
+        </div>
+    </div>
+    <div class="button">
+        <button>Reset</button>
+        <button>Submit</button>
+    </div>
 </body>
+
 </html>
